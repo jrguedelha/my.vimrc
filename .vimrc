@@ -2,7 +2,7 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
+" => 01 General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
@@ -36,7 +36,7 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface
+" => 02 VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
@@ -127,7 +127,7 @@ set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
+" => 03 Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
@@ -153,7 +153,7 @@ set ffs=unix,dos,mac
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
+" => 04 Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
@@ -162,10 +162,10 @@ set noswapfile
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
+" => 05 Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces characters instead of tabs
-set expandtab
+"set expandtab
 
 " Insert 'tabstop' number of spaces when the tab key is pressed
 set smarttab
@@ -197,7 +197,7 @@ set nowrap
 
 
 """"""""""""""""""""""""""""""
-" => Visual mode related
+" => 06 Visual mode related
 """"""""""""""""""""""""""""""
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
@@ -206,7 +206,7 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
+" => 07 Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
@@ -217,7 +217,7 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 
 
 """"""""""""""""""""""""""""""
-" => Status line
+" => 08 Status line
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=1
@@ -227,7 +227,7 @@ set laststatus=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
+" => 09 Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap VIM 0 to first non-blank character
 map 0 ^
